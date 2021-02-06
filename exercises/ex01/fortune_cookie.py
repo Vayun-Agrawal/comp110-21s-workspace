@@ -11,17 +11,17 @@ __author__ = "730358299"
 # It will evaluate to an int value >= 1 and <= 100. 
 from random import randint
 
-fortune = randint(1,4)
+fortune = randint(1, 4)
 # Begin your solution here...
 print("Your fortune cookie says ...")
 if fortune < 3:
     if fortune == 1:
-        print ("You will ace all of your exams")
+        print("You will ace all of your exams")
     else:
-        print ("You will get the job of your dreams")    
+        print("You will get the job of your dreams")    
 else:
     if fortune == 4:
-        print ("You will win a million dollars")
+        print("You will win a million dollars")
     else:
-        print ("You will win an all expenses paid vacation")
+        print("You will win an all expenses paid vacation")
 print("Now, go spread positive vibes! ")

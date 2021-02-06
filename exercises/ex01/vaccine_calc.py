@@ -23,13 +23,11 @@ doses_administered = int(input("Doses Administered: "))
 doses_per_day = int(input("Doses Per Day: "))
 target_percent = int(input("Target Percent Vaccinated: "))
 doses_remaining = population - doses_administered
-days_remaining = int(doses_remaining / doses_per_day)
+days_remaining = int((doses_remaining / doses_per_day) * (target_percent / 100))
 string = str(days_remaining)
 stringp = str(target_percent)
 today: datetime = datetime.today()
 days_rem_td: timedelta = timedelta(days_remaining)
 future: datetime = today + days_rem_td
-print("We will reach " + stringp + " vaccination in " + string + " days, which falls on " + future.strftime("%B %d, %Y") + ".")
-
-#print(future.strftime("%B %d, %Y"))
-
+print("We will reach " + stringp + "% vaccination in " + string + " days")
+print(future.strftime("%B %d, %Y"))
